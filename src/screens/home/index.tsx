@@ -6,17 +6,20 @@ import batLogo from "../../../assets/bat-logo.png"
 
 export default function Home(){
     return(
-        <View style={styles.container}>
-            <Image
-                source={batLogo}
-                style={styles.img}
-            />
+        <>
+            <View style={styles.logoContainer}>
+                <Text style={styles.tituloLogo}>Password Generator</Text>
+                <Image
+                    source={batLogo}
+                    style={styles.img}
+                />
+            </View>
+
             <TextInput
                 style={styles.inputer}
                 placeholder="Digite Aqui!"
             />
-            
-        </View>
+        </>
     );
 }
 
