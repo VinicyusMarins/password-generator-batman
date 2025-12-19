@@ -1,14 +1,14 @@
-import {Button} from "react-native";
+import {Text, Pressable} from "react-native";
 import styles from "./styles";
 
 export default function BatButton(){
     return(
         <>
-            <Button
-                title="Clique Aqui"
-                accessibilityLabel="Clique aqui!"
+            <Pressable
                 onPress={()=>{console.log("Sucesso")}}
-            />
+            >
+                <Text style={styles.batButton}>Gerar Senha</Text>
+            </Pressable>
         </>
     )
 }

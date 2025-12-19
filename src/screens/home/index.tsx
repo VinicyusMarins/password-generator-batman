@@ -4,6 +4,7 @@ import {View, Text, TextInput, Image} from "react-native";
 import styles from "./styles";
 import batLogo from "../../../assets/bat-logo.png"
 import BatButton from "../../components/BatButton";
+import BatCopy from "../../components/BatCopy";
 
 export default function Home(){
     return(
@@ -21,6 +22,7 @@ export default function Home(){
                 placeholder="Digite Aqui!"
             />
             <BatButton/>
+            <BatCopy/>
         </>
     );
 }
