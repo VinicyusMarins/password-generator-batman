@@ -4,8 +4,14 @@ import { BatTextInput } from "../BatTextInput";
 import { useState } from "react";
 import generatePassword from "../../services/generatePassword";
 
+import * as clipboard from "expo-clipboard";
+
 export default function BatButton(){
     const [pass, setPass] = useState("");
+
+    function handleCopyButton(){
+        clipboard.setStringAsync(pass);
+    }
 
     return(
         <>
@@ -17,8 +23,11 @@ export default function BatButton(){
                 <Text style={styles.batButton}>Generate</Text>
             </Pressable>
 
-            <Pressable>
-                <Text style={styles.copyButton}>
+            <Pressable
+                onPress={handleCopyButton}
+            >
+                <Text 
+                    style={styles.copyButton}>
                     Copiar 📄
                 </Text>
             </Pressable>
