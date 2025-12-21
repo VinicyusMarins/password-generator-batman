@@ -2,6 +2,7 @@ import {Text, Pressable} from "react-native";
 import styles from "./styles";
 import { BatTextInput } from "../BatTextInput";
 import { useState } from "react";
+import generatePassword from "../../services/generatePassword";
 
 export default function BatButton(){
     const [pass, setPass] = useState("");
@@ -9,9 +10,9 @@ export default function BatButton(){
     return(
         <>
             <BatTextInput pass={pass}/>
-            
+
             <Pressable
-                onPress={()=>{setPass("Sucesso")}}
+                onPress={()=>{setPass(generatePassword())}}
             >
                 <Text style={styles.batButton}>Generate</Text>
             </Pressable>
