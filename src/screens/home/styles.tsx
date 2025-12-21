@@ -1,15 +1,6 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    inputer:{
-        width: 250,
-        borderWidth: 1,
-        borderColor: "#ffffff",
-        borderRadius:20,
-        backgroundColor:"#d4bf00",
-        textAlign: "center",
-        fontWeight:"bold"
-    },
     img:{
         height: 200,
         width:300,
